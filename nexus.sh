@@ -34,3 +34,42 @@ sudo chkconfig nexus on
 sudo systemctl start nexus
 sudo systemctl status nexus
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+updated commands
+
+yum install java-17-amazon-corretto -y
+    2  mkdir /app/
+    3  cd /app/
+    4  sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+    5  ll
+    6  tar -zxvf nexus.tar.gz 
+    7  ll
+    8  sudo mv nexus-3* nexus
+    9  ll
+   10  sudo adduser nexus
+   11  sudo chown -R nexus:nexus /app/nexus
+   12  sudo chown -R nexus:nexus /app/sonatype-work
+   13  ll
+   14  cd nexus/
+   15  ll
+   16  cd bin/
+   17  ll
+   18  vim nexus.rc
+   19  sudo vim /etc/systemd/system/nexus.service
+   20  sudo chkconfig nexus on
+   21  sudo systemctl start nexus
+   22  sudo systemctl status nexus
+
